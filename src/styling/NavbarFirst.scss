@@ -28,4 +28,8 @@
   &__item:last-child {
     margin-left: auto;
   }
+
+  @media (min-width: 1200px) {
+    padding: 10px 300px;
+  }
 }

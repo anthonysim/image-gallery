@@ -14,4 +14,8 @@
   &__items--right {
     margin-left: auto;
   }
+
+  @media (min-width: 1200px) {
+    margin: 0 300px 0;
+  }
 }

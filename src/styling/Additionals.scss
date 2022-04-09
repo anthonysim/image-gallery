@@ -11,4 +11,8 @@
   img {
     vertical-align: middle;
   }
+
+  @media (min-width: 1200px) {
+    margin: 10px 300px 0;
+  }
 }
