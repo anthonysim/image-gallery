@@ -7,15 +7,22 @@ function ImageGallery() {
   const [state, setState] = useState(0);
 
   function thumbHandler(e: React.ChangeEvent<any>) {
-    const selectedId = e.target.getAttribute("data-index");
+    const selectedId: number = Number(e.target.getAttribute("data-index"));
 
     const images = document.querySelector(".thumbs")! as HTMLUListElement;
 
-    for (let image of images.children) {
-      console.log(images);
+    for (let i = 0; i < images.children.length; i++) {
+      let current = images.children[i].classList;
+      let isSelected = current.contains("thumbs__img--selected");
+
+      if (isSelected) {
+        current.remove("thumbs__img--selected");
+      }
+
+      if (i === selectedId) {
+        current.add("thumbs__img--selected");
+      }
     }
-
-
     setState(selectedId);
   }
 
