@@ -2,7 +2,6 @@
   max-width: 500px;
 }
 
-
 .thumbs {
   display: flex;
   gap: 0.2rem;
@@ -10,7 +9,6 @@
   min-width: 500px;
   overflow-x: scroll;
   cursor: pointer;
-
 
   &__img--selected {
     border: 2.5px solid #d1d0c5;

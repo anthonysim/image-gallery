@@ -7,8 +7,8 @@ function ImageGallery() {
   const [state, setState] = useState(0);
 
   function thumbHandler(e: React.ChangeEvent<any>) {
-    const id = e.target.getAttribute("data-index");
-    setState(id);
+    const selectedId = e.target.getAttribute("data-index");
+    setState(selectedId);
   }
 
   return (
@@ -16,6 +16,7 @@ function ImageGallery() {
       <br />
       <br />
       <div >
+
         {/* main image */}
         <div>
           <img
@@ -23,10 +24,12 @@ function ImageGallery() {
             src={data[state].main}
             alt="main pic" />
         </div>
+
         {/* thumbnail images */}
         <ul className="thumbs">
           {data?.map(item => {
             return item.id === 0 ?
+
               <li key={item.id}
                 className="thumbs__img thumbs__img--selected">
                 <img
@@ -35,6 +38,7 @@ function ImageGallery() {
                   onClick={(e: React.ChangeEvent<any>) => thumbHandler(e)}
                   alt="thumbail pic" />
               </li>
+
               : <li key={item.id}
                 className="thumbs__img">
                 <img
