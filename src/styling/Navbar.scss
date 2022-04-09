@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  list-style-type: none;
+  background: #3F7DA1;
+  color: #FFF;
+
+  &__item {
+    padding: 7px 12px;
+    border-right-style: solid;
+    border-right-color: black;
+    border-right-width: 1px;
+    transition: background-color 500ms ease-out;
+  }
+
+  &__item:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #c0cbd1;
+  }
+}
