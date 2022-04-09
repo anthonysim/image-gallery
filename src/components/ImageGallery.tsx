@@ -25,16 +25,25 @@ function ImageGallery() {
         </div>
         {/* thumbnail images */}
         <ul className="thumbs">
-          {data?.map(item =>
-            <li key={item.id}
-              className="thumbs__img thumbs__img--selected">
-              <img
-                data-index={item.id}
-                src={item.thumb}
-                onClick={(e: React.ChangeEvent<any>) => thumbHandler(e)}
-                alt="thumbail pic" />
-            </li>
-          )}
+          {data?.map(item => {
+            return item.id === 0 ?
+              <li key={item.id}
+                className="thumbs__img thumbs__img--selected">
+                <img
+                  data-index={item.id}
+                  src={item.thumb}
+                  onClick={(e: React.ChangeEvent<any>) => thumbHandler(e)}
+                  alt="thumbail pic" />
+              </li>
+              : <li key={item.id}
+                className="thumbs__img">
+                <img
+                  data-index={item.id}
+                  src={item.thumb}
+                  onClick={(e: React.ChangeEvent<any>) => thumbHandler(e)}
+                  alt="thumbail pic" />
+              </li>
+          })}
         </ul>
       </div>
       <Signin />
