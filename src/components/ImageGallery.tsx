@@ -16,14 +16,18 @@ function ImageGallery() {
       <br />
       <br />
       <div >
-        <img
-          className="main"
-          src={data[state].main}
-          alt="main pic" />
-
+        {/* main image */}
+        <div>
+          <img
+            className="main"
+            src={data[state].main}
+            alt="main pic" />
+        </div>
+        {/* thumbnail images */}
         <ul className="thumbs">
           {data?.map(item =>
-            <li key={item.id} >
+            <li key={item.id}
+              className="thumbs__img thumbs__img--selected">
               <img
                 data-index={item.id}
                 src={item.thumb}
