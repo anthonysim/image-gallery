@@ -8,6 +8,14 @@ function ImageGallery() {
 
   function thumbHandler(e: React.ChangeEvent<any>) {
     const selectedId = e.target.getAttribute("data-index");
+
+    const images = document.querySelector(".thumbs")! as HTMLUListElement;
+
+    for (let image of images.children) {
+      console.log(images);
+    }
+
+
     setState(selectedId);
   }
 
