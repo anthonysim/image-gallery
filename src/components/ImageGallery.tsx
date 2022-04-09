@@ -1,10 +1,19 @@
 import { useState } from 'react';
 import Signin from './Signin';
+import Modal from './Modal';
+
 import data from '../images/images.json';
+import { } from '../utils/Timer';
 import '../styling/ImageGallery.scss';
 
 function ImageGallery() {
   const [state, setState] = useState(0);
+  // const [modal, setModal] = useState(false);
+
+  function OpenModel() {
+    const modal = document.querySelector(".modal__dialog")! as HTMLElement;
+    modal.setAttribute("open", "");
+  }
 
   function thumbHandler(e: React.ChangeEvent<any>) {
     const selectedId: number = Number(e.target.getAttribute("data-index"));
@@ -32,9 +41,13 @@ function ImageGallery() {
       <br />
       <div >
 
+        {/* Modal */}
+        <Modal />
+
         {/* main image */}
         <div>
           <img
+            onClick={() => OpenModel()}
             className="main"
             src={data[state].main}
             alt="main pic" />
