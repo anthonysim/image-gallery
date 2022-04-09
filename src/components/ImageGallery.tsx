@@ -1,27 +1,38 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Signin from './Signin';
 import data from '../images/images.json';
 import '../styling/ImageGallery.scss';
 
 function ImageGallery() {
-  const [state, setState] = useState(data);
+  const [state, setState] = useState(0);
 
-  console.log(state);
+  function thumbHandler(e: React.ChangeEvent<any>) {
+    const id = e.target.getAttribute("data-index");
+    setState(id);
+  }
+
   return (
     <div>
       <br />
       <br />
-      <br />
-      <br />
-      <div className="imageGallery">
+      <div >
+        <img
+          className="main"
+          src={data[state].main}
+          alt="main pic" />
 
-        {state?.map(item => {
-          return <div key={item.id}>
-            <img src={item.thumb} alt="thumbail pic" />
-          </div>
-        })}
+        <ul className="thumbs">
+          {data?.map(item =>
+            <li key={item.id} >
+              <img
+                data-index={item.id}
+                src={item.thumb}
+                onClick={(e: React.ChangeEvent<any>) => thumbHandler(e)}
+                alt="thumbail pic" />
+            </li>
+          )}
+        </ul>
       </div>
-
       <Signin />
     </div>
   );

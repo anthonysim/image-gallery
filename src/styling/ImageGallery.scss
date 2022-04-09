@@ -1,6 +1,13 @@
-.imageGallery {
+.main {
+  max-width: 500px;
+}
+
+.thumbs {
   display: flex;
   gap: 0.3rem;
   max-width: 500px;
+  min-width: 500px;
   overflow-x: scroll;
+  cursor: pointer;
+
 }
