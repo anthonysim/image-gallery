@@ -1,10 +1,14 @@
-import Navbar from './Navbar';
+import NavbarFirst from './NavbarFirst';
+import NavbarSecond from './NavbarSecond';
 import '../styling/App.scss';
 
 function App() {
   return (
-    <div className="container">
-      <Navbar />
+    <div>
+      <NavbarFirst />
+      <div className="container">
+        <NavbarSecond />
+      </div>
     </div>
   );
 }
