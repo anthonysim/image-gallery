@@ -1,3 +1,4 @@
+import ImageGallery from './ImageGallery';
 import NavbarFirst from './NavbarFirst';
 import NavbarSecond from './NavbarSecond';
 import Footer from './Footer';
@@ -9,6 +10,7 @@ function App() {
       <NavbarFirst />
       <div className="container">
         <NavbarSecond />
+        <ImageGallery />
         <Footer />
       </div>
     </div>
