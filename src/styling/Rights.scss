@@ -1,0 +1,18 @@
+.rights {
+  display: flex;
+  list-style-type: none;
+  margin: 0 150px;
+  font-size: 0.65rem;
+  gap: 1.5em;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
+
+  &__items--desc {
+    text-align: start;
+  }
+
+  &__items--right {
+    margin-left: auto;
+  }
+}

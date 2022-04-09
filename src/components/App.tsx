@@ -1,5 +1,6 @@
 import NavbarFirst from './NavbarFirst';
 import NavbarSecond from './NavbarSecond';
+import Footer from './Footer';
 import '../styling/App.scss';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <NavbarFirst />
       <div className="container">
         <NavbarSecond />
+        <Footer />
       </div>
     </div>
   );

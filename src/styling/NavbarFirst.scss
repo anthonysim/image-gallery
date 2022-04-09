@@ -1,20 +1,32 @@
 .navbarFirst {
   border: 1px solid black;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
+  padding: 10px 150px;
 
-  padding: 40px 150px;
+  font-size: 0.75rem;
   background: #171a21;
   color: #B8B6B4;
-
   list-style-type: none;
 
   &__item {
     cursor: pointer;
 
-    &:hover {
+    &:hover:not(.navbarFirst__item--right) {
       color: #FFF;
     }
+  }
+
+  &__item__installSteam {
+    padding: 3px 6px;
+    color: rgb(229, 228, 220);
+    background: rgb(92, 126, 16);
+    ;
+  }
+
+  &__item:nth-child(6),
+  &__item:last-child {
+    margin-left: auto;
   }
 }

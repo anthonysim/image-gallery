@@ -9,6 +9,13 @@ function NavbarFirst() {
         <li className="navbarFirst__item">COMMUNITY</li>
         <li className="navbarFirst__item">ABOUT</li>
         <li className="navbarFirst__item">SUPPORT</li>
+        <li className="navbarFirst__item navbarFirst__item--installSteam"></li>
+        <li className="navbarFirst__item navbarFirst__item--right">
+          <span className="navbarFirst__item__installSteam">Install Steam</span>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;login</span>
+          <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <span>language</span>
+        </li>
       </ul>
     </div >
   );
