@@ -1,6 +1,6 @@
 .additionals {
   display: flex;
-  align-items: center;
+  justify-content: start;
   list-style-type: none;
   gap: 1em;
   font-size: 0.7em;
@@ -13,6 +13,6 @@
   }
 
   @media (min-width: 1200px) {
-    margin: 10px 300px 0;
+    margin: 10px 10px 0;
   }
 }

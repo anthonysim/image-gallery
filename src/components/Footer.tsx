@@ -5,6 +5,7 @@ import '../styling/Footer.scss';
 function Footer() {
   return (
     <div className="footer">
+      <div className="footer__space"></div>
       <div className="footer__horizontalLine" ></div>
       <ul className="footer__btn">
         <li className="footer__btn__item">ABOUT STEAM</li>

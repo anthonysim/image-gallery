@@ -1,12 +1,13 @@
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: static;
   width: 100%;
-  background-color: #171a21;
+  background: #171a21;
   color: white;
-  text-align: center;
   height: 200px;
+
+  &__space {
+    padding-top: 5px;
+  }
 
   &__horizontalLine {
     border-top: 1px solid #B8B6B4;
@@ -17,7 +18,7 @@
     margin: 15px 150px 0;
 
     @media (min-width: 1200px) {
-      margin: 15px 300px 0;
+      margin: 15px 0px 0;
     }
   }
 
@@ -33,6 +34,10 @@
       border-radius: 3px;
       cursor: pointer;
       font-size: .85rem;
+    }
+
+    @media (min-width: 1200px) {
+      margin: 15px 10px 0;
     }
   }
 }

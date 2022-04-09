@@ -11,8 +11,8 @@ function App() {
       <div className="container">
         <NavbarSecond />
         <ImageGallery />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
