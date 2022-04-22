@@ -50,7 +50,8 @@ function ImageGallery() {
             onClick={() => OpenModel()}
             className="main"
             src={data[state].main}
-            alt="main pic" />
+            alt="main pic"
+            tabIndex={0} />
         </div>
 
         {/* thumbnail images */}
@@ -64,7 +65,8 @@ function ImageGallery() {
                   data-index={item.id}
                   src={item.thumb}
                   onClick={(e: React.ChangeEvent<any>) => thumbHandler(e)}
-                  alt="thumbail pic" />
+                  alt="thumbail pic"
+                  tabIndex={0} />
               </li>
 
               : <li key={item.id}
@@ -73,7 +75,8 @@ function ImageGallery() {
                   data-index={item.id}
                   src={item.thumb}
                   onClick={(e: React.ChangeEvent<any>) => thumbHandler(e)}
-                  alt="thumbail pic" />
+                  alt="thumbail pic"
+                  tabIndex={0} />
               </li>
           })}
         </ul>

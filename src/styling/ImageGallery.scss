@@ -11,9 +11,9 @@
   align-items: center;
   gap: 0.2rem;
   max-width: 500px;
-  min-width: 500px;
   padding: 1.5px 0;
-  overflow-x: scroll;
+  overflow-x: auto;
+  height: 71px;
   cursor: pointer;
 
   &__img {
