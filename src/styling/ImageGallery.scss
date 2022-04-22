@@ -16,7 +16,12 @@
   overflow-x: scroll;
   cursor: pointer;
 
+  &__img {
+    height: 71px;
+    border: 2.5px solid transparent;
+  }
+
   &__img--selected {
-    border: 2.5px solid #d1d0c5;
+    border-color: #d1d0c5;
   }
 }
