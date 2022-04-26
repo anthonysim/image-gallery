@@ -1,8 +1,33 @@
+// fade in animation for images
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
 .main {
-  position: relative;
-  max-width: 500px;
-  cursor: pointer;
-  z-index: 0;
+  @include keyframes(fade) {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @include animate(fade, 1500ms, linear, 1);
+
+  &__img {
+    position: relative;
+    max-width: 500px;
+    cursor: pointer;
+    z-index: 0;
+  }
 }
 
 .thumbs {
@@ -18,6 +43,7 @@
   &__img {
     height: 71px;
     border: 2.5px solid transparent;
+
   }
 
   &__img--selected {

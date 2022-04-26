@@ -45,10 +45,10 @@ function ImageGallery() {
         <Modal />
 
         {/* main image */}
-        <div>
+        <div className="main">
           <img
             onClick={() => OpenModel()}
-            className="main"
+            className="main__img"
             src={data[state].main}
             alt="main pic"
             tabIndex={0} />
